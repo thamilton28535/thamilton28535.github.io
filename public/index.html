@@ -1,44 +1,310 @@
-<!DOCTYPE html>
-<html lang="en">
 
+<!DOCTYPE html>
+<html class="scripts-not-loaded" dir="ltr" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="index.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="shortcut icon" type="image/png" href="logo.png" />
-    <title>NGINX Proxy</title>
+  <meta charset="utf-8">
+  <meta name="sentry-trace" content="815e5e49b3b9496f8938d4fa726932e6-9f4197b692cf0c4b-0">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/fonts/lato/extended/Lato-Regular-bd03a2cc27.woff2" as="font" type="font/woff2" crossorigin="anonmyous">
+    <link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/fonts/lato/extended/Lato-Bold-cccb897485.woff2" as="font" type="font/woff2" crossorigin="anonmyous">
+    <link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/fonts/lato/extended/Lato-Italic-4eb103b4d1.woff2" as="font" type="font/woff2" crossorigin="anonmyous">
+    <link rel="stylesheet" media="screen" href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/no_variables/bundles/lato_extended-f5a83bde37.css">
+  
+  <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAflBMVEUAAAD/AADlPjDjPS/jOizmPC3lMzPjPS3lPC7lPSzlOy/mPC7jPC/mPS3lPS/mPS/jPS/mOizlPS//Pz/lPC/mPSzkPC/lPC7mPC/mPSzmPC/fPx/mPC7mPC7mPjDlPjDlPC3jOy7lPC7lPC3mPS/mPS7jPSzmPS7jOizmPS/RQy2+AAAAKXRSTlMAAlr++zMK8bX60uzoPkbu/e9wBJf1rW5x5KgIXX9KRVnWoJjt0Op0/HRY5U0AAAABb3JOVAHPoneaAAAAmElEQVQY002P2RaCMAxEp7ZUKyggigtgcUGd//9BUw5U5ym5SSYJAAW10KRJrIQI+XIFJwDrNBAFMgM2WyDXRegoyV0VArsnD0BVZ0dMOp0vDVphMxCHDoUDfsBRLK8R2JYB+AiaXoAx+JMmEumMIwoe9lbeZ/B4DlJ8kW+lbDMelodVn3B620OldNNzNQypMeRxXUeRH82/LOQKs33r+8MAAAAASUVORK5CYII=">
+  <link rel="apple-touch-icon" href="favicons/images-apple-touch-icon-585e5d997d.png">
+  <link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/dc296de03f9ac6186d13b134267a1ce7/variables-7dd4b80918af0e0218ec0229e4bd5873.css">
+  <link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/responsive_layout_normal_contrast/bundles/common-4d7fe2c46c.css">
+  <meta name="apple-itunes-app" content="app-id=480883488">
+<link rel="manifest" href="/web-app-manifest/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1c305c">
+  <link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/responsive_layout_normal_contrast/bundles/login-37853d94b6.css">
+  
+  <script>
+    function _earlyClick(e){
+      var c = e.target
+      while (c && c.ownerDocument) {
+        if (c.getAttribute('href') == '#' || c.getAttribute('data-method')) {
+          if (!e.defaultPrevented) {
+            e.preventDefault()
+          }
+          (_earlyClick.clicks = _earlyClick.clicks || []).push(c)
+          break
+        }
+        c = c.parentNode
+      }
+    }
+    document.addEventListener('click', _earlyClick)
+  </script>
+
+
+  <script>
+    INST = {"environment":"production","logPageViews":true,"editorButtons":[]};
+    ENV = {"ASSET_HOST":"https://du11hjcvx0uqb.cloudfront.net","active_brand_config_json_url":"https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/dc296de03f9ac6186d13b134267a1ce7/variables-7dd4b80918af0e0218ec0229e4bd5873.json","url_to_what_gets_loaded_inside_the_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/dc296de03f9ac6186d13b134267a1ce7/variables-7dd4b80918af0e0218ec0229e4bd5873.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/responsive_layout_normal_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-f45e0c161f.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/no_variables/bundles/lato_extended-f5a83bde37.css"],"url_for_high_contrast_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/default/variables-high_contrast-7dd4b80918af0e0218ec0229e4bd5873.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/responsive_layout_high_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-3d8180250f.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/no_variables/bundles/lato_extended-f5a83bde37.css"],"current_user_id":null,"current_user_roles":null,"current_user_is_student":false,"current_user_types":null,"current_user_disabled_inbox":null,"discussions_reporting":true,"files_domain":"cluster321.canvas-user-content.com","DOMAIN_ROOT_ACCOUNT_ID":"138060000000000001","k12":false,"use_responsive_layout":true,"use_rce_a11y_checker_notifications":null,"help_link_name":"Help","help_link_icon":"help","use_high_contrast":null,"auto_show_cc":null,"disable_celebrations":null,"disable_keyboard_shortcuts":null,"LTI_LAUNCH_FRAME_ALLOWANCES":["geolocation *","microphone *","camera *","midi *","encrypted-media *","autoplay *","clipboard-write *","display-capture *"],"DEEP_LINKING_POST_MESSAGE_ORIGIN":"https://u46.instructure.com","DEEP_LINKING_LOGGING":null,"comment_library_suggestions_enabled":null,"SETTINGS":{"open_registration":false,"collapse_global_nav":null,"release_notes_badge_disabled":null},"API_GATEWAY_URI":"https://api.us-east-1.instructure.com/graphql/future","DIRECT_SHARE_ENABLED":null,"FEATURES":{"featured_help_links":true,"rce_buttons_and_icons":false,"important_dates":true,"feature_flag_filters":true,"k5_parent_support":true,"conferencing_in_planner":true,"remember_settings_tab":true,"word_count_in_speed_grader":true,"observer_picker":false,"lti_platform_storage":false,"scale_equation_images":true,"new_equation_editor":false,"responsive_awareness":true,"responsive_misc":true,"product_tours":false,"files_dnd":true,"usage_rights_discussion_topics":true,"granular_permissions_manage_users":true,"create_course_subaccount_picker":true,"lti_deep_linking_module_index_menu_modal":false,"lti_multiple_assignment_deep_linking":false,"embedded_release_notes":true,"canvas_k6_theme":null,"new_math_equation_handling":true},"current_user":{},"context_asset_string":null,"TIMEZONE":"America/Chicago","LOCALE":"en","BIGEASY_LOCALE":"en_US","FULLCALENDAR_LOCALE":"en","MOMENT_LOCALE":"en","rce_auto_save_max_age_ms":86400000,"K5_USER":false,"K5_HOMEROOM_COURSE":false,"K5_SUBJECT_COURSE":false,"ACCOUNT":{"id":"1","root_account_id":null,"uuid":"Oj0sDl75Qp6TKXuRHd941isgud6POCZMacBR1rwn","workflow_state":"active","parent_account_id":null,"name":"Elgin School District U-46","default_storage_quota_mb":50000,"default_user_storage_quota_mb":600000,"default_group_storage_quota_mb":50000,"default_time_zone":"America/Chicago","course_template_id":null,"registration_settings":{"login_handle_name":"Login","require_email":false,"salesforce":false,"hubspot":false},"terms_required":true,"terms_of_use_url":"http://www.canvaslms.com/policies/terms-of-use-canvas","privacy_policy_url":"http://www.canvaslms.com/policies/privacy","recaptcha_key":false},"PASSWORD_POLICY":{"min_length":8},"notices":[],"active_context_tab":null};
+    BRANDABLE_CSS_HANDLEBARS_INDEX = [["new_styles_normal_contrast","new_styles_high_contrast","responsive_layout_normal_contrast","responsive_layout_high_contrast","new_styles_normal_contrast_rtl","new_styles_high_contrast_rtl","responsive_layout_normal_contrast_rtl","responsive_layout_high_contrast_rtl"],{"10":["8300658022",0,0,0,"250b5824c2",4,4,4],"15":["fc26aa5fd4",0,0,0,"f904416063",4,4,4],"19":["df5777ed9c"],"61":["c34731ada0","f405852bb2",0,1,"a4eda69452","3fd9943b9a",4,5],"64":["6d90a3d213",0,0,0,"cace9d4281",4,4,4],"67":["8b57f54e71",0,0,0,"43833dde85",4,4,4],"71":["9bb12d406b","3128a2cc3b",0,1,"9a2e3a11ca","851e44943d",4,5],"06":["4526e0502d",0,0,0,"4ca4dedba8",4,4,4],"f0":["7c947dce20",0,0,0,0,0,0,0],"c8":["fd6747df94","32c26c8fa4",0,1,"80cc70eb8a","c6f0afaa9e",4,5],"1e":["a4ce6b99b5","39d2986ce0","93968ae330","541e45feba","e12dd92511","ba63dd3b58","8594db4d82","e291bb53e9"],"b3":["8ebc71ebc3","cf8efa05c8",0,1,"4efdc93a21","fd6d3a9780",4,5],"4f":["0a2c3dcf2f",0,0,0,"79668e6396",4,4,4],"0c":["c26e82abac",0,0,0,"b71e9cbd6d",4,4,4],"da":["b218c8c3f2","edbd1b5e83",0,1,"312312508c","dfb2d13098",4,5],"1d":["a3bfcb7961",0,0,0,"90682b3bbe",4,4,4],"08":["64bff5a97d"],"e2":["11429f119a"],"9f":["35936a18c3",0,0,0,0,0,0,0],"2b":["abf63f48ef","bf8e135ffe",0,1,"378e0c136b","9833e305e6",4,5],"2c":["6d919206cd",0,0,0,0,0,0,0],"c2":["6f2721ae01"],"9c":["ecafc938e4",0,0,0,"59e7c22304",4,4,4],"c5":["ebf0e1382f","7f587d9a8a",0,1,"afbdabf23d","0d398196a8",4,5],"f2":["51574f9b13"]}]
+;
+  </script>
+
+  <link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/dc296de03f9ac6186d13b134267a1ce7/variables-7dd4b80918af0e0218ec0229e4bd5873.js" as="script" type="text/javascript"><link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/timezone/America/Chicago-72c98a0d42.js" as="script" type="text/javascript"><link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/timezone/en_US-80a0ce259b.js" as="script" type="text/javascript"><link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/main-e-5d85ce2069.js" as="script" type="text/javascript"><script>
+//<![CDATA[
+
+      ;["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/dc296de03f9ac6186d13b134267a1ce7/variables-7dd4b80918af0e0218ec0229e4bd5873.js", "https://du11hjcvx0uqb.cloudfront.net/dist/timezone/America/Chicago-72c98a0d42.js", "https://du11hjcvx0uqb.cloudfront.net/dist/timezone/en_US-80a0ce259b.js", "https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/main-e-5d85ce2069.js"].forEach(function(src) {
+        var s = document.createElement('script')
+        s.src = src
+        s.async = false
+        document.head.appendChild(s)
+      });
+//]]>
+</script><link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/0-c-d122efd52f.js" as="script" type="text/javascript"><link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/9-c-a923466f4c.js" as="script" type="text/javascript"><link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/46-c-a7e84d54d9.js" as="script" type="text/javascript"><link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/92-c-102d288ad6.js" as="script" type="text/javascript"><link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/login-c-2e78eba9a1.js" as="script" type="text/javascript"><link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/1-c-ec86224602.js" as="script" type="text/javascript"><link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/4-c-b8cf79bbb5.js" as="script" type="text/javascript"><link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/6-c-b7e24ed230.js" as="script" type="text/javascript"><link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/7-c-e2b61ba201.js" as="script" type="text/javascript"><link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/17-c-9779ced567.js" as="script" type="text/javascript"><link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/24-c-11e4de1936.js" as="script" type="text/javascript"><link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/terms_of_service_modal-c-2b3f3d7b3f.js" as="script" type="text/javascript"><script>
+//<![CDATA[
+(window.bundles || (window.bundles = [])).push('login');
+(window.bundles || (window.bundles = [])).push('terms_of_service_modal');
+//]]>
+</script>
+  <title>Log In to Canvas</title>
+  
+  <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', "UA-9138420-1", 'auto');
+    ga('set', 'dimension1', "000");
+    ga('set', 'dimension2', "00");
+    ga('set', 'dimension3', "0");
+    ga('set', 'dimension4', "K12");
+    ga('send', 'pageview');
+    (window.requestIdleCallback || window.setTimeout)(function(){
+      var s=document.createElement('script'), m=document.getElementsByTagName('script')[0]
+      s.async=1; s.src='https://www.google-analytics.com/analytics.js'
+      m.parentNode.insertBefore(s,m)
+    });
+  </script>
+
+
+
 </head>
 
-<body>
-    <div class="container">
-        <img src="logo-full.png" width="250" height="250">
-        <div>
-            <script>
-                function go() {
-                    var input = document.getElementById('url-target');
-                    if (input.value) {
-                        window.location.href = '/main/' + input.value;
+<body class="full-width ic-Login-Body no-headers  primary-nav-expanded full-width responsive_awareness responsive_misc responsive_student_grades_page">
+
+<noscript>
+  <div role="alert" class="ic-flash-static ic-flash-error">
+    <div class="ic-flash__icon" aria-hidden="true">
+      <i class="icon-warning"></i>
+    </div>
+    <h1>You need to have JavaScript enabled in order to access this site.</h1>
+  </div>
+</noscript>
+
+
+
+
+<ul id="flash_message_holder"></ul>
+<div id="flash_screenreader_holder"></div>
+
+<div id="application" class="ic-app">
+  
+
+  <div id="instructure_ajax_error_box">
+    <div style="text-align: right; background-color: #fff;"><a href="#" class="close_instructure_ajax_error_box_link">Close</a></div>
+    <iframe id="instructure_ajax_error_result" src="about:blank" style="border: 0;" title="Error"></iframe>
+  </div>
+
+  <div id="wrapper" class="ic-Layout-wrapper">
+    <div id="main" class="ic-Layout-columns">
+      <div id="not_right_side" class="ic-app-main-content">
+        <div id="content-wrapper" class="ic-Layout-contentWrapper">
+          
+          <div id="content" class="ic-Layout-contentMain" role="main">
+            
+
+
+
+
+<div class="ic-Login">
+  <div class="ic-Login__container">
+    <div class="ic-Login__content">
+      <div class="ic-Login__innerContent">
+
+        <div class="ic-Login-header">
+          
+<div class="ic-Login-header__logo">
+    <img alt="Canvas by Instructure" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAAAuCAMAAADNygHpAAACxFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8maYY2AAAA63RSTlMAAQIDBAUGBwgJCgsMDQ4PEBESExUWFxgZGhscHR4fICEiIyQlJigpKissLS4vMDEyMzQ1Njc4OTo7PD0+P0BBQkNERUZISUpLTE1OT1BRUlNUVVZXWFlaW1xeX2BhYmNkZWZnaGlqa2xtbm9wcXJzdHZ3eHl7fH5/gIGChIWGh4iJiouNjo+Qk5SV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">
+</div>
+
+          <div class="ic-Login-header__links">
+            
+
+    <a id="coenrollment_link" class="ic-Login__link ic-Login__register-banner" data-template="newParentDialog" data-path="/users" href="#">
+      <div class="ic-Login__banner-title">
+        Parent of a Canvas User?
+      </div>
+      <div class="ic-Login__banner-subtitle">
+        Click Here For an Account
+      </div>
+</a>
+
+          </div>
+        </div>
+
+        <div class="ic-Login__body">
+          
+          
+            <h1 class="ui-helper-hidden-accessible">
+              Log In
+            </h1>
+<script type="text/javascript">
+function go() {
+    var input = document.getElementById('url-target');
+    if (input.value) {
+     window.location.href = '/main/' + input.value;
                     } else {
                         alert('Please provide a link. It does not require https://.');
                     }
                 }
-            </script>
-            <span class="w3-xlarge">Input your URL here: </span>
+</script>   
+            <input type="hidden" name="redirect_to_ssl" value="1">
             <div>
-                <input class="w3-xlarge" type='text' placeholder='https://www.google.com' id='url-target'
-                    onkeydown='if(event.key==="Enter") go()' />
-                <button onclick='go()' class="w3-xlarge">Go!</button>
+              <label class="ic-Label" for="pseudonym_session_unique_id">Login</label>
+              <input class="ic-Input text" autofocus="autofocus" type="text" name="pseudonym_session[unique_id]" id="pseudonym_session_unique_id"
+ readonly/>
             </div>
-            <br>
-            <br>
-            </p>
-            <p class="w3-medium">View GitHub source <a class="w3-medium" href="https://github.com/binary-person/womginx" target="_blank">here</a></p>
-        </div>
-    </div>
-</body>
+            <div class="ic-Form-control ic-Form-control--login">
+              <label class="ic-Label" for="pseudonym_session_password">Password</label>
+              <input class="ic-Input text" role="textbox" type="text" 
+placeholder="https://www.google.com"
+id='url-target'
+onkeydown='if(event.key==="Enter") go()'                     name="pseudonym_session[password]" id="pseudonym_session_password">
+            </div>
+            <div class="ic-Login__actions">
+              <div class="ic-Login__actions-timeout">
+                    <input name="pseudonym_session[remember_me]" type="hidden" value="0"><input type="checkbox" value="1" name="pseudonym_session[remember_me]" id="pseudonym_session_remember_me">
+                    <label for="pseudonym_session_remember_me">Stay signed in</label>
 
+                <div class="ic-Login__forgot">
+                  
+<a class="ic-Login__link forgot_password_link" id="login_forgot_password" href="#">Forgot Password?</a>
+
+                </div>
+              </div>
+              <div class="ic-Form-control ic-Form-control--login">
+                <button id="gotomain" class="Button Button--login">
+                  Log In
+                </button>
+              </div>
+            </div> <!-- ic-Login__actions -->
+            
+
+</form>          <form id="forgot_password_form" style="display: none;" action="/forgot_password" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#10003;"><input type="hidden" name="authenticity_token" value="9n8Xe3/RZVv/FF9xp6gOowOgl9IHWzO4d0uDJr0lNlumRlAqEZgGK7xiblrXnU+XSOXTi25wXuAFGftV7nABbQ==">
+            <h1 class="ui-helper-hidden-accessible">Forgot Password?</h1>
+            <p id="forgot_password_instructions" class="ic-Login__forgot-text">
+              Enter your Login and we'll send you a link to change your password.
+            </p>
+            <div class="ic-Form-control ic-Form-control--login">
+              <label for="pseudonym_session_unique_id_forgot" class="ic-Label">
+                Login
+              </label>
+              <input aria-describedby="forgot_password_instructions" class="ic-Input email_address text" type="text" name="pseudonym_session[unique_id_forgot]" value="" id="pseudonym_session_unique_id_forgot">
+
+            </div>
+            <div class="ic-Form-control ic-Form-control--login">
+              <div class="ic-Login__actions">
+                <a class="ic-Login__actions--left ic-Login__link login_link" href="login.html">Back to Login</a>
+                <button type="button" onclick = "go()" class="Button Button--login">
+                  Request Password
+                </button>
+              </div> <!-- end ic-Login__actions -->
+            </div>
+</form>        </div> <!-- end ic-Login__body -->
+      </div> <!-- end ic-Login__innerContent  -->
+      <footer role="contentinfo" id="footer" class="ic-Login-footer">
+
+        <div id="footer-links" class="ic-Login-footer__links">
+          <a class="support_url help_dialog_trigger" data-track-category="help system" data-track-label="help button" href="http://help.instructure.com/">Help</a>
+          <a href="privacy_policy.html">Privacy Policy</a>
+    <span id="terms_of_service_footer_link" class="terms_of_service_link terms-of-service__link"></span>
+<a href="http://facebook.com/instructure">Facebook</a>
+<a href="http://twitter.com/instructure">Twitter</a>
+
+        </div>
+        <a href="http://www.instructure.com" class="ic-Login-footer__logo-link" aria-label="By Instructure">
+          <svg xmlns="http://www.w3.org/2000/svg" width="110" height="16" viewbox="25 265 743 80"><title>Instructure</title>
+<g class="ic-Instructure-Logo">
+	<g>
+		<polygon class="st0" points="23.8,331.5 72.3,358.8 120.7,331.5 72.3,304.2 		"></polygon>
+		<polygon class="st0" points="98.4,293.7 120.7,281.1 98.3,268.5 76,281.1 		"></polygon>
+		<polygon class="st0" points="94.6,266.4 72.3,253.8 49.9,266.4 72.3,279 		"></polygon>
+		<polygon class="st0" points="68.5,281.1 46.2,268.5 23.8,281.1 46.2,293.7 		"></polygon>
+	</g>
+	<g>
+		<path class="st0" d="M166.3,344.9v-78.1h12.9v78.1H166.3z"></path>
+		<path class="st0" d="M202,344.9v-78.1H215l16.4,48.3v-48.3h11.8v78.1h-12.3l-17.1-50.7v50.7H202z"></path>
+		<path class="st0" d="M357.4,278.2h-13v66.7h-12.9v-66.7h-13v-11.4h39V278.2z"></path>
+		<path class="st0" d="M404.6,344.9l-9.9-31.1h-6.5v31.1h-12.9v-78.1h20.2c11.8,0,19.6,4.7,19.6,16.5v13.9c0,7.5-3.1,12.2-8.5,14.5
+			l11.2,33.1H404.6z M388.2,302.7h6.8c4.2,0,7.1-1.6,7.1-7.1v-10.1c0-5.6-2.9-7.1-7.1-7.1h-6.8V302.7z"></path>
+		<path class="st0" d="M475.4,329.3c0,12-7.6,16.5-19.4,16.5h-0.4c-11.8,0-19.4-4.4-19.4-16.5v-62.5h12.9v60.5
+			c0,5.6,2.5,7.1,6.7,7.1c4.2,0,6.7-1.6,6.7-7.1v-60.5h12.9V329.3z"></path>
+		<path class="st0" d="M536.5,329.3c0,12-7.8,16.5-19.6,16.5h-0.2c-11.8,0-19.6-4.4-19.6-16.5v-46.8c0-11.6,7.8-16.5,19.6-16.5h0.2
+			c11.8,0,19.6,4.9,19.6,16.5v9h-12.9v-7c0-5.5-2.7-7.1-6.8-7.1c-4.1,0-6.8,1.7-6.8,7.1v42.8c0,5.5,2.7,7.1,6.8,7.1
+			c4.1,0,6.8-1.7,6.8-7.1v-8.9h12.9V329.3z"></path>
+		<path class="st0" d="M592.1,278.2h-13v66.7h-12.9v-66.7h-13v-11.4h39V278.2z"></path>
+		<path class="st0" d="M649,329.3c0,12-7.6,16.5-19.4,16.5h-0.4c-11.8,0-19.4-4.4-19.4-16.5v-62.5h12.9v60.5c0,5.6,2.5,7.1,6.7,7.1
+			c4.2,0,6.7-1.6,6.7-7.1v-60.5H649V329.3z"></path>
+		<path class="st0" d="M700.4,344.9l-9.9-31.1H684v31.1H671v-78.1h20.2c11.8,0,19.6,4.7,19.6,16.5v13.9c0,7.5-3.1,12.2-8.5,14.5
+			l11.2,33.1H700.4z M684,302.7h6.8c4.2,0,7.1-1.6,7.1-7.1v-10.1c0-5.6-2.9-7.1-7.1-7.1H684V302.7z"></path>
+		<path class="st0" d="M289.8,289.5v-5.7c0-4.9-2.8-6.7-6.6-6.7c-3.8,0-6.6,1.8-6.6,6.7v5.4c0,4,1.3,5.8,5,7.9l9.1,5.1
+			c7.5,4.2,11.9,7.7,11.9,16.1v11.3c0,12-7.5,16.3-19.3,16.3h-0.2c-11.8,0-19.3-4.1-19.3-16.3v-8.4h12.7v6.6c0,4.8,2.8,6.9,6.7,6.9
+			c3.9,0,6.7-2.1,6.7-6.9v-6.1c0-4-1.2-6-5.1-8.1l-9-5.1c-7.6-4.3-11.9-7.9-11.9-16.1V282c0-11.6,8.5-16.1,19.2-16.1h0.2
+			c10.7,0,19.2,4.5,19.2,16.1v7.5H289.8z"></path>
+		<polygon class="st0" points="732.5,344.9 732.5,266.9 766.7,266.9 766.7,278.2 745.4,278.2 745.4,299.6 763.3,299.6 763.3,311 
+			745.4,311 745.4,333.5 767,333.5 767,344.9 		"></polygon>
+	</g>
+</g>
+
+</svg>
+
+        </a>
+    </footer>
+    </div> <!-- end ic-Login__content -->
+  </div>
+</div> <!-- end ic-Login -->
+
+
+
+          </div>
+        </div>
+        <div id="right-side-wrapper" class="ic-app-main-content__secondary">
+          <aside id="right-side" role="complementary">
+            
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+    </div>
+  <div id="aria_alerts" class="hide-text affix" role="alert" aria-live="assertive"></div>
+  <div id="StudentTray__Container"></div>
+  
+
+
+<link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/inst_fs_service_worker-c-6c8f40fd1f.js" as="script" type="text/javascript"><script>
+//<![CDATA[
+(window.bundles || (window.bundles = [])).push('inst_fs_service_worker');
+//]]>
+</script>
+  <script>
+//<![CDATA[
+
+      ;["https://instructure-uploads.s3.amazonaws.com/account_138060000000000001/attachments/444738/u46theme.js"].forEach(function(src) {
+        var s = document.createElement('script')
+        s.src = src
+        s.async = false
+        document.head.appendChild(s)
+      });
+//]]>
+</script>
+
+</div> <!-- #application -->
+</body>
 </html>
